@@ -3,9 +3,11 @@ import {Link} from 'react-router-dom'
 
 const BlogCard = ({blogPost}) => {
 
+  console.log(blogPost)
+
 return (
-<div className="card" style="width:400px">
-  <img className="card-img-top" src={blogPost.heroImage.file.url} alt="Card image"/>
+<div className="card" style={{width: '400px'}}>
+  <img className="card-img-top" src={blogPost.heroImage.fields.file.url} alt="Card image"/>
   <div className="card-body">
     <h4 className="card-title">{blogPost.title}</h4>
     <p className="card-text">{blogPost.description}</p>
